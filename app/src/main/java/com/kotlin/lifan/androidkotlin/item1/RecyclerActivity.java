@@ -3,7 +3,6 @@ package com.kotlin.lifan.androidkotlin.item1;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
@@ -11,7 +10,6 @@ import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.Window;
 
 import com.kotlin.lifan.androidkotlin.BaseActivity;
 import com.kotlin.lifan.androidkotlin.R;
@@ -19,7 +17,7 @@ import com.kotlin.lifan.androidkotlin.R;
 import java.util.ArrayList;
 import java.util.List;
 
-public class RecyclerActivity extends AppCompatActivity {
+public class RecyclerActivity extends BaseActivity {
 
     private List<String> data;
     private RecyclerView recyclerView;
