@@ -1,5 +1,6 @@
 package com.kotlin.lifan.androidkotlin.item1;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -10,25 +11,34 @@ import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.Window;
 
+import com.kotlin.lifan.androidkotlin.BaseActivity;
 import com.kotlin.lifan.androidkotlin.R;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class Item1 extends AppCompatActivity {
+public class RecyclerActivity extends AppCompatActivity {
 
     private List<String> data;
     private RecyclerView recyclerView;
     private RecyclerAdapter recyclerAdapter;
 
+    public static void start(Context context){
+        context.startActivity(new Intent(context,RecyclerActivity.class));
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+//        requestWindowFeature(Window.FEATURE_CUSTOM_TITLE);
+
         setContentView(R.layout.ac_recycler);
         data = new ArrayList<>();
 
-        recyclerView = (RecyclerView) findViewById(R.id.recycler_view);
+        recyclerView = findViewById(R.id.recycler_view);
 
         initData();
 
@@ -76,7 +86,7 @@ public class Item1 extends AppCompatActivity {
                         5, StaggeredGridLayoutManager.HORIZONTAL));
                 break;
             case R.id.staggered:
-                startActivity(new Intent(this,Item1.class));
+                startActivity(new Intent(this,StaggeredActivity.class));
                 break;
             case R.id.reset:
                 initData();

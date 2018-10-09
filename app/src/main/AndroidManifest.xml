@@ -17,6 +17,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity android:name=".item1.RecyclerActivity"
+            android:theme="@style/RecyclerActivityTheme"/>
+
+        <activity android:name=".item1.StaggeredActivity" />
+
     </application>
 
 </manifest>
