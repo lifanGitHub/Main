@@ -15,9 +15,6 @@ import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 public class SurfaceMainActivity extends BaseActivity {
-//    @BindView(R.id.button0)
-//    View view;
-
     public static void start(Context context){
         context.startActivity(new Intent(context,SurfaceMainActivity.class));
     }
@@ -27,17 +24,10 @@ public class SurfaceMainActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.ac_sv_main);
         ButterKnife.bind(this);
-//        view.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                startActivity(new Intent(SurfaceMainActivity.this, MyViewActivity.class));
-//            }
-//        });
     }
 
     @OnClick({R.id.button0, R.id.button1, R.id.button2, R.id.button3})
     public void onViewClicked(View view) {
-//        Log.i("lf","lf");
         switch (view.getId()) {
             case R.id.button0:
                 startActivity(new Intent(this, MyViewActivity.class));

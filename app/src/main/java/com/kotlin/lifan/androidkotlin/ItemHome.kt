@@ -1,6 +1,7 @@
 package com.kotlin.lifan.androidkotlin
 
 import android.content.Context
+import android.util.AttributeSet
 import android.view.LayoutInflater
 import android.widget.FrameLayout
 import kotlinx.android.synthetic.main.view_home_item.*
@@ -18,6 +19,18 @@ class ItemHome : FrameLayout {
         button.setOnClickListener(onClickListener)
     }
 
+    constructor(context: Context?) : super(context){
+        LayoutInflater.from(context).inflate(R.layout.view_home_item,this,true)
+    }
+    constructor(context: Context?, attrs: AttributeSet?) : super(context, attrs){
+        LayoutInflater.from(context).inflate(R.layout.view_home_item,this,true)
+    }
 
+    fun setText(text: String){
+        button.text = text
+    }
 
+    fun setClick(onClickListener: OnClickListener){
+        button.setOnClickListener(onClickListener)
+    }
 }
