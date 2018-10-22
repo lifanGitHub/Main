@@ -18,6 +18,5 @@ public class GameActivity extends BaseActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.ac_game);
-        ((String)null).equals("");
     }
 }

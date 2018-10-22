@@ -6,4 +6,6 @@
 
     <color name="colorDef">#87CEFA</color>
     <color name="colorPre">#7D26CD</color>
+
+    <color name="bg_main">#303030</color>
 </resources>
