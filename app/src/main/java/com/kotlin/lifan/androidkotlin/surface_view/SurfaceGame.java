@@ -11,6 +11,7 @@ import android.view.SurfaceView;
 import java.util.concurrent.TimeUnit;
 
 import io.reactivex.Observable;
+import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.functions.Consumer;
 import io.reactivex.schedulers.Schedulers;
 
@@ -19,21 +20,12 @@ public class SurfaceGame extends SurfaceView implements Callback {
 
     public SurfaceGame(Context context, AttributeSet attrs) {
         super(context, attrs);
-        handler.postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                startRxThread();
-            }
-        },3000);
-    }
-
-    public void init() {
-
-//        new Thread(drawRunnable).start();
+        startRxThread();
     }
 
     private void startRxThread() {
         Observable
+//                .timer(3,TimeUnit.SECONDS, AndroidSchedulers.mainThread())
                 .interval(50, TimeUnit.MILLISECONDS,Schedulers.newThread())
                 .observeOn(Schedulers.newThread())
                 .subscribe(new Consumer<Long>() {
