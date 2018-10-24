@@ -22,6 +22,8 @@ import java.util.List;
  * Created by LiFan on 2016/8/23.
  */
 public class ChessPanel extends View implements View.OnTouchListener{
+    private int winNumber = ChessConfig.WIN_NUMBER;
+    private boolean whiteAction = ChessConfig.whiteAction;
     private int panelWidth;
     private float lineHeight;
     private int MAX_LINE = 13;
@@ -30,10 +32,8 @@ public class ChessPanel extends View implements View.OnTouchListener{
     private Bitmap blackPiece;
     private float pieceScale = 3*1.0f/4;
 
-    private boolean isWhite = true;
     private List<Point> whiteArray = new ArrayList<>();
     private List<Point> blackArray = new ArrayList<>();
-    private int winNumber = ChessConfig.WIN_NUMBER;
     private int winGameUser = 0;
 
     public ChessPanel(Context context, @Nullable AttributeSet attrs) {
@@ -135,7 +135,7 @@ public class ChessPanel extends View implements View.OnTouchListener{
             if (whiteArray.contains(point) || blackArray.contains(point)){
                 return false;
             }
-            if (isWhite){
+            if (whiteAction){
                 whiteArray.add(point);
             }else {
                 blackArray.add(point);
@@ -165,7 +165,7 @@ public class ChessPanel extends View implements View.OnTouchListener{
 
     private void checkWin(){
         List<Point> array = blackArray;
-        if (isWhite){
+        if (whiteAction){
             array = whiteArray;
         }
         if (array.size()==0){
@@ -177,7 +177,7 @@ public class ChessPanel extends View implements View.OnTouchListener{
         winXX(array);
         winYY(array);
 
-        isWhite = !isWhite;
+        whiteAction = !whiteAction;
     }
 
     private void winX(List<Point> array) {
