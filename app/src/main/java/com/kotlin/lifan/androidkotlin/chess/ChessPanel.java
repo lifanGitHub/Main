@@ -33,7 +33,7 @@ public class ChessPanel extends View implements View.OnTouchListener{
     private boolean isWhite = true;
     private List<Point> whiteArray = new ArrayList<>();
     private List<Point> blackArray = new ArrayList<>();
-    private int winNumber = 3;
+    private int winNumber = ChessConfig.WIN_NUMBER;
     private int winGameUser = 0;
 
     public ChessPanel(Context context, @Nullable AttributeSet attrs) {
