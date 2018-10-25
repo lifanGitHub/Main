@@ -35,6 +35,7 @@
         <activity android:name=".surface_view.BoardActivity"/>
         <activity android:name=".surface_view.VideoActivity"/>
         <activity android:name=".chess.ChessActivity"/>
+        <activity android:name=".my_view.SeekBarAc"/>
 
         <service android:name=".service.demo1.My1Service"/>
         <service android:name=".service.demo1.My12Service"/>
