@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">AndroidKotlin</string>
+    <string name="mode0">制冷</string>
 </resources>

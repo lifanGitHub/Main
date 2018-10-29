@@ -14,6 +14,7 @@ class MainActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        content.addView(ItemHome(this,"DemoList", View.OnClickListener { RecyclerActivity.start(this) }))
         content.addView(ItemHome(this,"RecyclerView", View.OnClickListener { RecyclerActivity.start(this) }))
         content.addView(ItemHome(this,"Service", View.OnClickListener { ServiceActivity.start(this) }))
         content.addView(ItemHome(this,"Surface", View.OnClickListener { SurfaceMainActivity.start(this) }))
