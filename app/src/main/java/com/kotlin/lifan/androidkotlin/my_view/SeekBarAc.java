@@ -5,7 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 
-import com.kotlin.lifan.androidkotlin.BaseActivity;
+import com.kotlin.lifan.androidkotlin.base.BaseActivity;
 import com.kotlin.lifan.androidkotlin.R;
 
 import java.util.concurrent.TimeUnit;
@@ -26,7 +26,7 @@ public class SeekBarAc extends BaseActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.ac_seekbar);
-        final MyView myView = findViewById(R.id.my_view);
+        final ProcessView processView = findViewById(R.id.my_view);
 
         disposable = Observable
                 .interval(100, TimeUnit.MICROSECONDS)
@@ -35,7 +35,7 @@ public class SeekBarAc extends BaseActivity {
                     @Override
                     public void accept(Long aLong) throws Exception {
                         float x = aLong * 0.1f / 1000 / 10;
-                        myView.setProcess(x);
+                        processView.setProcess(x);
                     }
                 }, new Consumer<Throwable>() {
                     @Override

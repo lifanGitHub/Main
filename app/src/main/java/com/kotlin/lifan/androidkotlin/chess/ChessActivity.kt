@@ -3,7 +3,7 @@ package com.kotlin.lifan.androidkotlin.chess
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
-import com.kotlin.lifan.androidkotlin.BaseActivity
+import com.kotlin.lifan.androidkotlin.base.BaseActivity
 import com.kotlin.lifan.androidkotlin.R
 
 /**

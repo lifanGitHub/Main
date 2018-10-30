@@ -5,7 +5,7 @@
     android:background="@color/bg_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.kotlin.lifan.androidkotlin.MainActivity">
+    tools:context="com.kotlin.lifan.androidkotlin.base.MainActivity">
 
     <LinearLayout
         android:id="@+id/content"

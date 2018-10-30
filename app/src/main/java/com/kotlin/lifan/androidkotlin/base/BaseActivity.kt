@@ -1,4 +1,4 @@
-package com.kotlin.lifan.androidkotlin
+package com.kotlin.lifan.androidkotlin.base
 
 import android.support.v7.app.AppCompatActivity
 

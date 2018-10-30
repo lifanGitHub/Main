@@ -2,21 +2,9 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
-    <LinearLayout
-        android:id="@+id/view_group_1"
-        android:background="#2A8FA0"
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="78dp">
+    <com.kotlin.lifan.androidkotlin.demo_list.RoomModeViewX
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
 
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/view_group_2"
-        android:background="#2A8FA0"
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="78dp">
-
-    </LinearLayout>
+    </com.kotlin.lifan.androidkotlin.demo_list.RoomModeViewX>
 </LinearLayout>
