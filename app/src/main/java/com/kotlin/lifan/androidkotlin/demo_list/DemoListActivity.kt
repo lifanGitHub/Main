@@ -5,10 +5,9 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.View
 
-import com.kotlin.lifan.androidkotlin.BaseActivity
-import com.kotlin.lifan.androidkotlin.ItemHome
+import com.kotlin.lifan.androidkotlin.base.BaseActivity
+import com.kotlin.lifan.androidkotlin.base.ItemHome
 import com.kotlin.lifan.androidkotlin.R
-import com.kotlin.lifan.androidkotlin.item1.RecyclerActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
 /**
@@ -27,6 +26,6 @@ class DemoListActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        content.addView(ItemHome(this,"空调模式", View.OnClickListener { ModeChoiceAc.start(this) }))
+        content.addView(ItemHome(this, "空调模式", View.OnClickListener { ModeChoiceAc.start(this) }))
     }
 }

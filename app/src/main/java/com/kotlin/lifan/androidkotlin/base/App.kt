@@ -1,4 +1,4 @@
-package com.kotlin.lifan.androidkotlin
+package com.kotlin.lifan.androidkotlin.base
 
 import android.app.Application
 import kotlin.properties.Delegates

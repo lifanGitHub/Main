@@ -3,14 +3,11 @@ package com.kotlin.lifan.androidkotlin.surface_view;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
 
-import com.kotlin.lifan.androidkotlin.BaseActivity;
+import com.kotlin.lifan.androidkotlin.base.BaseActivity;
 import com.kotlin.lifan.androidkotlin.R;
 
-import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 

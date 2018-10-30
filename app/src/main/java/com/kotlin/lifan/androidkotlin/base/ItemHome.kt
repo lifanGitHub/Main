@@ -1,10 +1,10 @@
-package com.kotlin.lifan.androidkotlin
+package com.kotlin.lifan.androidkotlin.base
 
 import android.content.Context
 import android.util.AttributeSet
 import android.view.LayoutInflater
 import android.widget.FrameLayout
-import kotlinx.android.synthetic.main.view_home_item.*
+import com.kotlin.lifan.androidkotlin.R
 import kotlinx.android.synthetic.main.view_home_item.view.*
 
 /**

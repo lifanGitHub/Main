@@ -17,7 +17,7 @@ import org.w3c.dom.Text;
  * @date 2018/10/24
  */
 
-public class MyView extends View implements MyViewImp{
+public class ProcessView extends View implements MyViewImp{
     private float precent = 0.0f;
     private int wideSize;
     private int heightSize;
@@ -26,7 +26,7 @@ public class MyView extends View implements MyViewImp{
 //    private
 
 
-    public MyView(Context context, @Nullable AttributeSet attrs) {
+    public ProcessView(Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
 
     }

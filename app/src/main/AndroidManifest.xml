@@ -3,57 +3,60 @@
     package="com.kotlin.lifan.androidkotlin">
 
     <application
-        android:name=".App"
+        android:name=".base.App"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".login.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <activity android:name=".item1.RecyclerActivity"
-            android:theme="@style/RecyclerActivityTheme"/>
-
+        <activity
+            android:name=".item1.RecyclerActivity"
+            android:theme="@style/RecyclerActivityTheme" />
         <activity android:name=".item1.StaggeredActivity" />
-        <activity android:name=".service.ServiceActivity"/>
-        <activity android:name=".service.demo1.My1Activity"/>
-        <activity android:name=".service.demo2.My2Activity"/>
-        <activity android:name=".service.demo3.My3Activity"/>
-        <activity android:name=".service.demo4.My4Activity"/>
-        <activity android:name=".service.demo5.My5Activity"/>
-        <activity android:name=".service.demo6.My6Activity"/>
-        <activity android:name=".surface_view.GameActivity"/>
-        <activity android:name=".surface_view.MyViewActivity"/>
-        <activity android:name=".surface_view.SurfaceMainActivity"/>
-        <activity android:name=".surface_view.BoardActivity"/>
-        <activity android:name=".surface_view.VideoActivity"/>
-        <activity android:name=".chess.ChessActivity"/>
-        <activity android:name=".my_view.SeekBarAc"/>
-        <activity android:name=".demo_list.DemoListActivity"/>
-        <activity android:name=".demo_list.ModeChoiceAc"/>
+        <activity android:name=".service.ServiceActivity" />
+        <activity android:name=".service.demo1.My1Activity" />
+        <activity android:name=".service.demo2.My2Activity" />
+        <activity android:name=".service.demo3.My3Activity" />
+        <activity android:name=".service.demo4.My4Activity" />
+        <activity android:name=".service.demo5.My5Activity" />
+        <activity android:name=".service.demo6.My6Activity" />
+        <activity android:name=".surface_view.GameActivity" />
+        <activity android:name=".surface_view.MyViewActivity" />
+        <activity android:name=".surface_view.SurfaceMainActivity" />
+        <activity android:name=".surface_view.BoardActivity" />
+        <activity android:name=".surface_view.VideoActivity" />
+        <activity android:name=".chess.ChessActivity" />
+        <activity android:name=".my_view.SeekBarAc" />
+        <activity android:name=".demo_list.DemoListActivity" />
+        <activity android:name=".demo_list.ModeChoiceAc" />
 
-        <service android:name=".service.demo1.My1Service"/>
-        <service android:name=".service.demo1.My12Service"/>
-        <service android:name=".service.demo2.My2Service"/>
-        <service android:name=".service.demo3.My3Service"/>
-        <service android:name=".service.demo4.My4Service"/>
-        <service android:name=".service.demo5.BroadcastService"
-            android:process=":remote"/>
-        <service android:name=".service.demo6.My6Service"
-            android:process=":remote"/>
+        <service android:name=".service.demo1.My1Service" />
+        <service android:name=".service.demo1.My12Service" />
+        <service android:name=".service.demo2.My2Service" />
+        <service android:name=".service.demo3.My3Service" />
+        <service android:name=".service.demo4.My4Service" />
+        <service
+            android:name=".service.demo5.BroadcastService"
+            android:process=":remote" />
+        <service
+            android:name=".service.demo6.My6Service"
+            android:process=":remote" />
+
         <receiver android:name=".service.demo5.NormalReceiver">
             <intent-filter>
                 <action android:name="com.example.normal.receiver" />
             </intent-filter>
         </receiver>
 
+        <activity android:name=".base.MainActivity"/>
     </application>
 
 </manifest>
