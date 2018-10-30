@@ -51,21 +51,17 @@ public class RoomModeItemViewX extends FrameLayout {
     @BindView(R.id.check_image)
     ImageView checkImage;
 
-    private final static int res[] = {R.drawable.mode0,R.drawable.mode1,R.drawable.mode2,R.drawable.mode3,R.drawable.mode4,R.drawable.mode5,R.drawable.mode6,R.drawable.mode7,R.drawable.mode8,R.drawable.mode9};
-    private final static int resCheck[] = {R.drawable.mode0disable,R.drawable.mode1disable,R.drawable.mode2disable,R.drawable.mode3disable,R.drawable.mode4disable,R.drawable.mode5disable,R.drawable.mode6disable,R.drawable.mode7disable,R.drawable.mode8disable,R.drawable.mode9disable};
-    private final static int resDisable[] = {R.drawable.mode_grey0,R.drawable.mode_grey1,R.drawable.mode_grey2,R.drawable.mode_grey3,R.drawable.mode_grey4,R.drawable.mode_grey5,R.drawable.mode_grey6,R.drawable.mode_grey7,R.drawable.mode_grey8,R.drawable.mode_grey9};
-    private final static int name[] = {R.string.mode0,R.string.mode1,R.string.mode2,R.string.mode3,R.string.mode4,R.string.mode5,R.string.mode6,R.string.mode7,R.string.mode8,R.string.mode9};
     public RoomModeItemViewX(@NonNull Context context) {
         super(context);
     }
 
-    public RoomModeItemViewX init(@DrawableRes int defaultRes,
-                                  @DrawableRes int checkRes,
-                                  @DrawableRes int disableRes,
-                                  @StringRes int textRes,
-                                  boolean haveLine,
-                                  int hexMode,
-                                  @NonNull ModeCheck listener){
+    public RoomModeItemViewX init(final @DrawableRes int defaultRes,
+                                  final @DrawableRes int checkRes,
+                                  final @DrawableRes int disableRes,
+                                  final @StringRes int textRes,
+                                  final boolean haveLine,
+                                  final int hexMode,
+                                  final @NonNull ModeCheck listener){
         this.listener = listener;
         this.lineEnable = haveLine;
         this.defaultRes = defaultRes;
