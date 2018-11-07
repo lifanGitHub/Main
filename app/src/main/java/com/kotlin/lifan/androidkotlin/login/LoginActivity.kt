@@ -13,6 +13,7 @@ import java.util.concurrent.TimeUnit
 class LoginActivity : BaseActivity() {
     var dispose: Disposable ?= null
     var add = 0
+    var i = 0f
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login2)
@@ -20,13 +21,15 @@ class LoginActivity : BaseActivity() {
                 .interval(100, TimeUnit.MICROSECONDS)
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe({ aLong ->
-                    val x = aLong!! * 0.1f / 1000f / 10f * 4
-                    processView.setProcess(x)
+                    i = aLong!! * 0.1f / 1000f / 10f * 4
+                    processView.setProcess(i)
                 }) { }
         textHintView.setOnClickListener{
-            add++
-            if (add == 2){
-                MainActivity.start(this)
+            if (i < 1) {
+                add++
+                if (add == 2) {
+                    MainActivity.start(this)
+                }
             }
         }
     }
