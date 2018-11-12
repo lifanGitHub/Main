@@ -37,6 +37,7 @@
         <activity android:name=".my_view.SeekBarAc" />
         <activity android:name=".demo_list.DemoListActivity" />
         <activity android:name=".demo_list.ModeChoiceAc" />
+        <activity android:name=".data_base.DBActivity" />
 
         <service android:name=".service.demo1.My1Service" />
         <service android:name=".service.demo1.My12Service" />
