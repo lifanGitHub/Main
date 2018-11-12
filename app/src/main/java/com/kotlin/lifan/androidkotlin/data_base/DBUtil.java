@@ -11,7 +11,7 @@ import android.database.sqlite.SQLiteOpenHelper;
  */
 
 public class DBUtil extends SQLiteOpenHelper {
-    public static final String NAME = "LF_DB";
+    public static final String NAME = "SYSTEM_Log";
     public static final int VERSION = 1;
 
     public DBUtil(Context context) {

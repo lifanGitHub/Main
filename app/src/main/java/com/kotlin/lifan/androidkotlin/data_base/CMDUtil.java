@@ -12,6 +12,7 @@ public class CMDUtil {
             " CREATE TABLE IF NOT EXISTS " + "TAB" +
                     " (id integer primary key autoincrement, " +
                     " create_time long not null, " +
+                    " level text not null, " +
                     " content text not null ); ";
 
 }
