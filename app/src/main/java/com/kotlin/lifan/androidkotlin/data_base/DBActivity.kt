@@ -23,8 +23,7 @@ class DBActivity : BaseActivity() {
         val list = DataBase.getInstance().readTabSys()
         for (it in list.size -1 downTo 0){
             val sysModel = list[it]
-            val str: String = "时间:${formatData(sysModel.time)} \n来自:${sysModel.level} 内容:${sysModel.content}\n-----------------------------------------\n" +
-                    ""
+            val str: String = "时间:${formatData(sysModel.time)} \n来自:${sysModel.level} 内容:${sysModel.content}\n-----------------------------------------\n"
             dbView.append(str)
         }
 
