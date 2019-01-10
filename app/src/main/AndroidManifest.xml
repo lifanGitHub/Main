@@ -4,7 +4,6 @@
     <uses-permission android:name="android.permission.INTERNET"/>
     <application
         android:name=".base.App"
-        android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
@@ -38,6 +37,7 @@
         <activity android:name=".demo_list.DemoListActivity" />
         <activity android:name=".demo_list.ModeChoiceAc" />
         <activity android:name=".data_base.DBActivity" />
+        <activity android:name=".killapptest.KillActivity" />
 
         <service android:name=".service.demo1.My1Service" />
         <service android:name=".service.demo1.My12Service" />
