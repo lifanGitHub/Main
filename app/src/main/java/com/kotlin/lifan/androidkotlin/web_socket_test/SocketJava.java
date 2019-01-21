@@ -1,4 +1,4 @@
-package com.kotlin.lifan.androidkotlin.base;
+package com.kotlin.lifan.androidkotlin.web_socket_test;
 
 import android.support.annotation.Nullable;
 import android.util.Log;
@@ -25,12 +25,13 @@ import okio.ByteString;
 public class SocketJava {
     public static WebSocket mWebSocket;
     private static void log(String s){
-        Log.i("lifanS",s);
+        System.out.println("webs:"+s);
     }
-
+    private static Disposable disposable;
     public static void init(){
         log("开始");
-        String wsUrl = "ws://121.40.165.18:8800";
+        String wsUrl = "ws://184.170.223.3:8070/webSocket";
+//        String wsUrl = "ws://172.29.12.67:8070/webSocket";
         OkHttpClient client = new OkHttpClient.Builder()
                 .build();
         Request request = new Request.Builder()
@@ -73,7 +74,7 @@ public class SocketJava {
         });
 
 
-        Disposable disposable =
+        disposable =
         Observable.interval(1,TimeUnit.SECONDS)
                 .observeOn(Schedulers.newThread())
                 .subscribe(new Consumer<Long>() {
@@ -81,18 +82,19 @@ public class SocketJava {
                     public void accept(Long aLong) throws Exception {
                         if (mWebSocket!=null) {
                             mWebSocket.send("发送消息" + aLong);
+//                            disposable.dispose();
                         }
                     }
                 }, new Consumer<Throwable>() {
                     @Override
                     public void accept(Throwable throwable) throws Exception {
                         log("异常"+throwable.toString());
+                        disposable.dispose();
                     }
                 });
+    }
 
-
-
-
-
+    public static void main(String[] args) {
+        SocketJava.init();
     }
 }

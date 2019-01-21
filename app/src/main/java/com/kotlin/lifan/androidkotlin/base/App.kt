@@ -2,6 +2,8 @@ package com.kotlin.lifan.androidkotlin.base
 
 import android.app.Application
 import com.kotlin.lifan.androidkotlin.data_base.DataBase
+import com.kotlin.lifan.androidkotlin.web_socket_test.SocketJava
+import com.kotlin.lifan.androidkotlin.web_socket_test.SocketUtilKt
 import kotlin.properties.Delegates
 
 /**
@@ -15,9 +17,15 @@ class App : Application() {
 
         DataBase.getInstance().writeTabSys("System","APP启动")
 
-        SocketUtilKt.init()
+        SocketJava.init()
     }
     companion object {
+        @JvmStatic
+        var killTestIndex = 0
+        get() {
+            field++
+            return field
+        }
         @JvmStatic
         var instance : App by Delegates.notNull()
     }
