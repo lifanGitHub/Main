@@ -38,6 +38,7 @@
         <activity android:name=".demo_list.ModeChoiceAc" />
         <activity android:name=".data_base.DBActivity" />
         <activity android:name=".killapptest.KillActivity" />
+        <activity android:name=".threadview.ThreadViewActivity" />
 
         <service android:name=".service.demo1.My1Service" />
         <service android:name=".service.demo1.My12Service" />
