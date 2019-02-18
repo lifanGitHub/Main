@@ -9,6 +9,7 @@ import com.kotlin.lifan.androidkotlin.base.BaseActivity
 import com.kotlin.lifan.androidkotlin.base.ItemHome
 import com.kotlin.lifan.androidkotlin.R
 import com.kotlin.lifan.androidkotlin.killapptest.KillActivity
+import com.kotlin.lifan.androidkotlin.threadview.ThreadViewActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
 /**
@@ -29,5 +30,6 @@ class DemoListActivity : BaseActivity() {
         setContentView(R.layout.activity_main)
         content.addView(ItemHome(this, "空调模式", View.OnClickListener { ModeChoiceAc.start(this) }))
         content.addView(ItemHome(this, "App持久化存储", View.OnClickListener { KillActivity.start(this) }))
+        content.addView(ItemHome(this, "子线程刷新View", View.OnClickListener { ThreadViewActivity.start(this) }))
     }
 }
