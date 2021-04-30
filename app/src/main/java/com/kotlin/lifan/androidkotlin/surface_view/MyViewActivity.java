@@ -1,7 +1,7 @@
 package com.kotlin.lifan.androidkotlin.surface_view;
 
 import android.os.Bundle;
-import android.support.annotation.Nullable;
+import androidx.annotation.Nullable;
 
 import com.kotlin.lifan.androidkotlin.base.BaseActivity;
 import com.kotlin.lifan.androidkotlin.R;

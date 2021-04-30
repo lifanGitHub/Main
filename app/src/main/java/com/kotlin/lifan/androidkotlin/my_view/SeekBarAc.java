@@ -3,7 +3,7 @@ package com.kotlin.lifan.androidkotlin.my_view;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
+import androidx.annotation.Nullable;
 
 import com.kotlin.lifan.androidkotlin.base.BaseActivity;
 import com.kotlin.lifan.androidkotlin.R;

@@ -4,8 +4,7 @@ import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
-import android.support.annotation.CheckResult;
-import android.util.Log;
+import androidx.annotation.CheckResult;
 
 import com.kotlin.lifan.androidkotlin.base.App;
 

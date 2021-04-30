@@ -2,15 +2,12 @@ package com.kotlin.lifan.androidkotlin.my_view;
 
 import android.content.Context;
 import android.graphics.Canvas;
-import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.RectF;
-import android.support.annotation.Nullable;
+import androidx.annotation.Nullable;
 import android.text.TextPaint;
 import android.util.AttributeSet;
 import android.view.View;
-
-import org.w3c.dom.Text;
 
 /**
  * @author by LiFan

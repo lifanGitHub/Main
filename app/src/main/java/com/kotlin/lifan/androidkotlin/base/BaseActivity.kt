@@ -1,6 +1,6 @@
 package com.kotlin.lifan.androidkotlin.base
 
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 
 /**
  * @author by LiFan

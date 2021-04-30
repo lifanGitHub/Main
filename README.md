@@ -1,11 +1,8 @@
 # AndroidKotlin
-汇集了平时开发
 
-项目分为三个部分
-1. Kotlin的学习与练习
-2. Java项目(逐渐合并入Kotlin)
-3. LeetCode刷题
+18年创建的项目
 
-目标是在2018年年底熟练使用Kotlin开发(大体上实现)Android<br />
+用来学习Android
+运行集成开元的一些实用的项目
+学习Kotlin之路
 
-###项目目录
